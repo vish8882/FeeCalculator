@@ -14,7 +14,8 @@ import com.sapient.transaction.client.ProcessingFeeCalcI;
 public class FeeCalculatorMain {
 
 	public static void main(String[] args) {
-		File file= new File("C://Users//1022176//Desktop//Fee.csv");
+		//Insert you file
+		File file= new File("C://Users//1022//Desktop//Fee.csv");
 		TransactionReaderI reader = TransactionReaderFactory.getTransactionReaderInstance("CSV");
 		Map<TransactionKey,List<Transaction>> transactionMap = reader.transactionReader(file);
 		ProcessingFeeCalcI feeCalc = new ProcessingFeeCalc(transactionMap);
